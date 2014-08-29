@@ -46,7 +46,7 @@ install: build
 	dh_testdir
 	dh_testroot
 	dh_prep
-	set -e; for file in libpng12-0.install libpng12-dev.links libpng3.links; \
+	set -e; for file in libpng12-0.install libpng12-0.links libpng12-dev.links libpng3.links; \
 	do \
 		sed -e"s,\$${DEB_HOST_MULTIARCH},${DEB_HOST_MULTIARCH},g" \
 			debian/$${file}.in > debian/$$file; \
@@ -81,10 +81,7 @@ binary-arch: build install
 	dh_shlibdeps -a
 	dh_gencontrol -a
 	dh_md5sums -a
-	dh_builddeb -plibpng12-0 -- -Zbzip2 -z9
-	dh_builddeb -plibpng12-dev -- -Zbzip2 -z9
-	dh_builddeb -plibpng3 -- -Zbzip2 -z9
-	dh_builddeb -plibpng12-0-udeb
+	dh_builddeb -a
 
 binary: binary-indep binary-arch
 .PHONY: build clean binary-indep binary-arch binary install

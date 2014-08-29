@@ -1,3 +1,116 @@
+libpng (1.2.50-2) unstable; urgency=medium
+
+  * Merge 1.2.50-1ubuntu3.
+    Closes: #689092.
+  * Use defaults for dh_builddeb.
+  * Remove debian/source/options.
+  * Refresh patches.
+
+ -- Anibal Monsalve Salazar <anibal@debian.org>  Sat, 26 Jul 2014 03:27:02 +0100
+
+libpng (1.2.50-1ubuntu3) utopic; urgency=medium
+
+  * Make the -dev package Multi-Arch: same. Closes: #689092.
+  * Don't hard-code the libdir in libpng-config, and error out when
+    using the libpng-config --libdir option.
+
+ -- Matthias Klose <doko@ubuntu.com>  Thu, 19 Jun 2014 11:20:33 +0200
+
+libpng (1.2.50-1ubuntu2) trusty; urgency=medium
+
+  * Add debian/patches/02-required-space.patch, thanks to Dan Kegel for the
+    patch. (LP: #1298779)
+
+ -- Brian Murray <brian@ubuntu.com>  Mon, 31 Mar 2014 14:20:51 -0700
+
+libpng (1.2.50-1ubuntu1) trusty; urgency=medium
+
+  * Merge from Debian testing. Remaining changes:
+    - Revert to gzip compression for libpng12-0's data tarball. Packages in
+      the base system may not use bzip2.
+  * Drop our autopkgtest changes, debian has those now
+
+ -- Jackson Doak <noskcaj@ubuntu.com>  Fri, 31 Jan 2014 06:41:50 +1100
+
+libpng (1.2.50-1) unstable; urgency=low
+
+  * New upstream release.
+  * Update Standards-Version to 3.9.5.
+  * Add support autopkgtest. (Closes: #693047)
+    Thanks Rafał Cieślak, Martin Pitt and Jakub Wilk.
+
+ -- Nobuhiro Iwamatsu <iwamatsu@debian.org>  Mon, 27 Jan 2014 11:51:01 +0900
+
+libpng (1.2.49-5ubuntu1) trusty; urgency=low
+
+  * Merge from Debian testing. Remaining changes:
+    - Revert to gzip compression for libpng12-0's data tarball. Packages in
+      the base system may not use bzip2.
+    - Add debian/tests: Simple compile/link/run autopkgtest
+
+ -- Jackson Doak <noskcaj@ubuntu.com>  Tue, 22 Oct 2013 06:41:11 +1100
+
+libpng (1.2.49-5) unstable; urgency=low
+
+  [ Slテ。vek Banko ]
+  * Ship /usr/lib/${DEB_HOST_MULTIARCH}/libpng12.so.0 symlink
+    in libpng12-0, instead of libpng12-dev. (Closes: #713270)
+
+  [ Anibal Monsalve Salazar ]
+  * Standards-Version: 3.9.4
+  * Fix Lintian issue:
+    - libpng source: brace-expansion-in-debhelper-config-file
+      debian/libpng12-dev.install
+
+ -- Anibal Monsalve Salazar <anibal@debian.org>  Sun, 06 Oct 2013 10:31:53 +1100
+
+libpng (1.2.49-4ubuntu1) saucy; urgency=low
+
+   * Merge from Debian unstable. Remaining changes:
+    - Revert to gzip compression for libpng12-0's data tarball. Packages in
+      the base system may not use bzip2.
+    - Add debian/tests: Simple compile/link/run autopkgtest
+
+ -- Jackson Doak <noskcaj@ubuntu.com>  Thu, 22 Aug 2013 16:05:43 +1000
+
+libpng (1.2.49-4) unstable; urgency=low
+
+  [ Andreas Beckmann ]
+  * libpng12-dev: Ship /usr/lib/${DEB_HOST_MULTIARCH}/libpng12.so.0 ->
+    /lib/${DEB_HOST_MULTIARCH}/libpng12.so.0 symlink, too, to prevent ldconfig
+    from playing ping-pong with the SONAME link.  (Closes: #706181)
+
+ -- Anibal Monsalve Salazar <anibal@debian.org>  Fri, 26 Apr 2013 16:42:23 +1000
+
+libpng (1.2.49-3) unstable; urgency=low
+
+  * Remove patches/02-681408-CVE-2012-3386-Makefile.in.patch.
+    This patch is unnecessary. This issue is already fixed in automake.
+
+ -- Nobuhiro Iwamatsu <iwamatsu@debian.org>  Tue, 28 Aug 2012 16:22:51 +0900
+
+libpng (1.2.49-2) unstable; urgency=high
+
+  * Change "a+w" to "u+w" in Makefile.in to fix CVE-2012-3386
+    Add 02-681408-CVE-2012-3386-Makefile.in.patch
+    Closes: #681408
+
+ -- Anibal Monsalve Salazar <anibal@debian.org>  Fri, 13 Jul 2012 12:31:39 +1000
+
+libpng (1.2.49-1ubuntu2) raring; urgency=low
+
+  * Add debian/tests: Simple compile/link/run autopkgtest. (LP: #1073538)
+
+ -- Rafał Cieślak <rafalcieslak256@ubuntu.com>  Wed, 31 Oct 2012 16:43:53 +0100
+
+libpng (1.2.49-1ubuntu1) quantal; urgency=low
+
+  * Merge from Debian unstable. Remaining changes:
+    - Revert to gzip compression for libpng12-0's data tarball. Packages in
+      the base system may not use bzip2.
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Thu, 24 May 2012 10:13:23 -0400
+
 libpng (1.2.49-1) unstable; urgency=high
 
   * New upstream version 1.2.49
@@ -5,7 +118,7 @@ libpng (1.2.49-1) unstable; urgency=high
       Closes: 667475
     - Don't crash with electric fence memory debugger
       Closes: 668082
-  * Merged upstream: 02-665208-CVE-2012-3045.patch 
+  * Merged upstream: 02-665208-CVE-2012-3045.patch
 
  -- Anibal Monsalve Salazar <anibal@debian.org>  Mon, 09 Apr 2012 12:08:13 +1000
 
@@ -47,6 +160,42 @@ libpng (1.2.46-4) unstable; urgency=low
     Enabled hardened build flags. (Closes: #654149)
 
  -- Nobuhiro Iwamatsu <iwamatsu@debian.org>  Mon, 09 Jan 2012 21:23:43 +0900
+
+libpng (1.2.46-3ubuntu4) precise; urgency=low
+
+  * SECURITY UPDATE: denial of service and possible code execution via
+    memory corruption issue.
+    - debian/patches/CVE-2011-3048.patch: correctly restore to previous
+      condition in pngset.c.
+    - CVE-2011-3048
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Thu, 05 Apr 2012 08:21:56 -0400
+
+libpng (1.2.46-3ubuntu3) precise; urgency=low
+
+  * SECURITY UPDATE: denial of service and possible code execution via
+    incorrect type.
+    - debian/patches/CVE-2011-3045.patch: use correct type, properly handle
+      odd chunk lengths, fix off-by-one in pngrutil.c.
+    - CVE-2011-3045
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Wed, 21 Mar 2012 13:16:18 -0400
+
+libpng (1.2.46-3ubuntu2) precise; urgency=low
+
+  * SECURITY UPDATE: fix integer overflow / truncation
+    - debian/patches/CVE-2011-3026.patch: adjust pngrutil.c to verify size
+      when allocating memory in png_decompress_chunk()
+    - CVE-2011-3026
+
+ -- Jamie Strandboge <jamie@ubuntu.com>  Wed, 15 Feb 2012 21:10:29 -0600
+
+libpng (1.2.46-3ubuntu1) oneiric; urgency=low
+
+  * Revert to gzip compression for libpng12-0's data tarball.  Packages in
+    the base system may not use bzip2.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Wed, 10 Aug 2011 21:25:16 +0100
 
 libpng (1.2.46-3) unstable; urgency=low
 

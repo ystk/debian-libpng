@@ -1,1 +1,3 @@
 01-legacy.patch
+02-required-space.patch
+libpng-config.diff
