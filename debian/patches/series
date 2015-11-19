@@ -7,3 +7,6 @@
 07-CVE-2011-3045.patch
 08-CVE-2011-3048.patch
 
+09-CVE-2015-7981.patch
+10-CVE-2015-8126.patch
+#already present in source: 11-CVE-2012-3425.patch
