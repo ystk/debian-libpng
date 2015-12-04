@@ -1,3 +1,17 @@
+libpng (1.2.50-2+deb8u1) jessie-security; urgency=high
+
+  * Non-maintainer upload by the Security Team.
+  * Add CVE-2015-7981.patch patch.
+    CVE-2015-7981: Out-of-bounds read in png_convert_to_rfc1123.
+    (Closes: #803078)
+  * Add Prevent-writing-over-length-PLTE-chunk-Cosm.patch patch.
+    CVE-2015-8126: Multiple buffer overflows in the png_set_PLTE and
+    png_get_PLTE functions. (Closes: #805113)
+  * Add Fixed-new-bug-with-CRC-error-after-reading-.patch patch.
+    Fixed new bug with CRC error after reading an over-length palette.
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Tue, 17 Nov 2015 19:21:32 +0100
+
 libpng (1.2.50-2) unstable; urgency=medium
 
   * Merge 1.2.50-1ubuntu3.

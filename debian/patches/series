@@ -1,3 +1,6 @@
 01-legacy.patch
 02-required-space.patch
 libpng-config.diff
+CVE-2015-7981.patch
+Prevent-writing-over-length-PLTE-chunk-Cosm.patch
+Fixed-new-bug-with-CRC-error-after-reading-.patch
