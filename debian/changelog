@@ -1,3 +1,13 @@
+libpng (1.2.50-2+deb8u2) jessie-security; urgency=high
+
+  * Non-maintainer upload by the Security Team.
+  * Add patches to address CVE-2015-8472.
+    CVE-2015-8472: Incomplete fix for callers on png_set_PLTE. (Closes: #807112)
+  * Add CVE-2015-8540.patch patch.
+    CVE-2015-8540: underflow read in png_check_keyword(). (Closes: #807694)
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Thu, 07 Jan 2016 20:05:55 +0100
+
 libpng (1.2.50-2+deb8u1) jessie-security; urgency=high
 
   * Non-maintainer upload by the Security Team.
