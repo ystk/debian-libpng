@@ -1,3 +1,21 @@
+libpng (1.2.44-1+squeeze6) squeeze-lts; urgency=high
+
+  * Non-maintainer upload by the Squeeze LTS Team. 
+  * CVE-2015-8472
+    update incomplete patch for CVE-2015-8126
+  * CVE-2015-8540
+    underflow read in png_check_keyword in pngwutil.c
+  * CVE-2012-3425
+    The png_push_read_zTXt function in pngpread.c in libpng 1.0.x 
+    before 1.0.58, 1.2.x before 1.2.48, 1.4.x before 1.4.10, and 
+    1.5.x before 1.5.10 allows remote attackers to cause a denial 
+    of service (out-of-bounds read) via a large avail_in field value 
+    in a PNG image.
+    In contrast to the next changelog entry, the vulnerable code
+    is present.
+
+ -- Thorsten Alteholz <debian@alteholz.de>  Tue, 22 Dec 2015 19:03:02 +0100
+
 libpng (1.2.44-1+squeeze5) squeeze-lts; urgency=high
 
   * Non-maintainer upload by the Squeeze LTS Team. 
