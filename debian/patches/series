@@ -8,3 +8,4 @@ CVE-2015-8472/0001-Avoid-potential-pointer-overflow-in-png_han.patch
 CVE-2015-8472/0002-Use-unsigned-constants-in-buffer-length-com.patch
 CVE-2015-8472/0003-Fixed-bug-recently-introduced-in-png_set_PL.patch
 CVE-2015-8540.patch
+CVE-2016-10087.patch
